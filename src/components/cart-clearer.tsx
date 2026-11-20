@@ -1,0 +1,10 @@
+"use client";
+
+import { useEffect } from "react";
+import { useCart } from "@/components/cart-provider";
+
+export function CartClearer() {
+  const { clear } = useCart();
+  useEffect(() => clear(), [clear]);
+  return null;
+}
